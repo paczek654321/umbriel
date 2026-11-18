@@ -7,10 +7,13 @@
 
 namespace umbriel {
 
+  enum OutputModeTarget { None, HighRefreshRate, HighResolution };
+
   struct OutputMode {
     int width = 0;
     int height = 0;
     int refreshMHz = 0;
+    OutputModeTarget target = OutputModeTarget::None;
 
     bool operator==(const OutputMode&) const = default;
   };
